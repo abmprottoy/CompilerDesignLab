@@ -1,10 +1,9 @@
 #include <iostream>
 
 int main() {
-    int a = 42;
-    int b = -123;
-    double c = 3.14;
-    double d = -0.567;
+    int a = 13;
+    int b = 257;
+    double c = 3.1416;
+    double d = 0.5671;
     int notANumber = abc;
-
 }
