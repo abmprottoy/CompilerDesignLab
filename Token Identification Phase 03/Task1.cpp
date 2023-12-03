@@ -29,7 +29,7 @@ string getOperatorType(char ch) {
 
 
 
-std::string extractFunctionName(std::string& line) {
+string extractFunctionName(string& line) {
     int openingParenthesisPos = line.find('(');
     bool foundClosingParenthesis = false;
     bool foundOpeningCurlyBrace = false;
