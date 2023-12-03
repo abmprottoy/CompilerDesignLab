@@ -44,16 +44,14 @@ string extractFunctionName(string& line) {
 
 
     if (openingParenthesisPos != string::npos && foundClosingParenthesis && foundOpeningCurlyBrace) {
-
         int i = openingParenthesisPos;
+
         while (i > 0 && std::isalnum(line[i - 1])) {
             --i;
         }
 
-
         return line.substr(i, openingParenthesisPos - i);
     }
-
 
     return "";
 }
@@ -69,12 +67,11 @@ int main(){
 
     while(getline(inputFile, line)){
 
-        string functionName = extractFunctionName(line);
+    string functionName = extractFunctionName(line);
 
     if (!functionName.empty() && functionName != "main") {
-        std::cout << "Function Name: " << functionName << std::endl;
+        std::cout << "User defined function Name: " << functionName << std::endl;
     }
-
         for (char ch : line) {
             string type = getOperatorType(ch);
             if (type != "false") {
@@ -87,9 +84,14 @@ int main(){
 
     string functionName = extractFunctionName(line);
 
+    int functionCount = 0;
+
     if (!functionName.empty()) {
         std::cout << "Function Name: " << functionName << std::endl;
+        functionCount++;
     }
+
+    cout<<"Total number of the user defined function: "<<functionCount<<endl;
 
     cout << "Operator Types:" << endl;
     int count = 1;
