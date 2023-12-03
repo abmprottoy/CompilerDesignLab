@@ -64,13 +64,16 @@ int main(){
     ifstream inputFile("Program.cpp");
     string line;
     unordered_set<string> operatorTypes;
+    int functionCount = 0;
 
     while(getline(inputFile, line)){
 
     string functionName = extractFunctionName(line);
 
+
     if (!functionName.empty() && functionName != "main") {
-        std::cout << "User defined function Name: " << functionName << std::endl;
+        cout << "User defined function Name: " << functionName << endl;
+        functionCount++;
     }
         for (char ch : line) {
             string type = getOperatorType(ch);
@@ -84,11 +87,10 @@ int main(){
 
     string functionName = extractFunctionName(line);
 
-    int functionCount = 0;
+
 
     if (!functionName.empty()) {
         std::cout << "Function Name: " << functionName << std::endl;
-        functionCount++;
     }
 
     cout<<"Total number of the user defined function: "<<functionCount<<endl;
