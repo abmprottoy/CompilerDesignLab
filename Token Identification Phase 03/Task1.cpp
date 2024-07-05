@@ -72,7 +72,8 @@ int main(){
 
 
     if (!functionName.empty() && functionName != "main") {
-        cout << "User defined function Name: " << functionName << endl;
+        cout << "User defined function Name: " << functionName << "\n";
+        cout << "\n";
         functionCount++;
     }
         for (char ch : line) {
