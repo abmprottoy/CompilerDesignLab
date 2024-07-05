@@ -14,7 +14,6 @@ int main() {
         if (c == '+' || c == '-' || c == '*' || c == '/' || c == '=' || c == '%') {
             operatorCount++;
             cout << "Operator " << operatorCount << ": " << c << endl;
-            // i use arch btw
         }
     }
 
